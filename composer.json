@@ -1,0 +1,50 @@
+{
+    "name": "otodev/laravel-ping",
+    "type": "project",
+    "description": "Ping for Laravel Framework.",
+    "keywords": ["ping", "framework", "laravel"],
+    "license": "MIT",
+	"authors": [
+        {
+            "name": "Dimitris Ntais",
+            "email": "d.dais@otodev.gr"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/support": "^7.0"
+    },
+    "require-dev": {
+		"laravel/framework": "^7.0",
+        "phpunit/phpunit": "^8.5"
+    },
+    "extra": {
+        "laravel": {
+			"providers": [
+				"Otodev\\Ping\\Providers\\PingServiceProvider"
+			],
+            "aliases": {
+                "Ping": "Otodev\\Ping\\Facades\\Ping"
+            }
+        },
+		"branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Otodev\\Ping\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Otodev\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}
